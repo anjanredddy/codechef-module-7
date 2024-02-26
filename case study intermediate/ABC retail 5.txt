@@ -1,0 +1,9 @@
+select p.product_id,p.selling_price,d.units_sold as max_sold,d.month from product_catalog p 
+join division_product_sales d 
+on p.product_id = d.product_id
+join (
+    select dps.month,max(dps.units_sold) as max_units_sold
+    from division_product_sales dps 
+    group by dps.month) as m 
+on d.month = m.month and d.units_sold = m.max_units_sold
+order by max_units_sold desc,p.selling_price desc;

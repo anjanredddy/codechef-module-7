@@ -1,0 +1,4 @@
+Correct Answer:
+
+Larger trucks can carry more 'tonnage' / weight of goods.
+The fixed cost of operating a truck - driver expenses, fuel, toll gets distributed and hence the cost / distance is lower.

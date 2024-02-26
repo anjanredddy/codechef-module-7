@@ -1,0 +1,5 @@
+select * ,case 
+when month in('Mar','Apr','May') then 'Loss due to Covid'
+else 'This is fine' end as Remarks 
+from financials
+limit 10;

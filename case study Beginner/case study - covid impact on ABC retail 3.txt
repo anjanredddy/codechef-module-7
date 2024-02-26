@@ -1,0 +1,4 @@
+select month,sum(revenue) as monthly_revenue,sum(profit_loss) as monthly_pnl
+from financials
+group by month
+order by monthly_pnl desc;

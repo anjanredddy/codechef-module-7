@@ -1,0 +1,3 @@
+select product_id,product_type,avg(units_sold) as avg_sold
+from division_product_sales
+group by product_id;

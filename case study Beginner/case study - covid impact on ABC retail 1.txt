@@ -1,0 +1,2 @@
+select * from Financials
+limit 10;

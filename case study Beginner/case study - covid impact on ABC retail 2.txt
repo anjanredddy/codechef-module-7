@@ -1,0 +1,2 @@
+select * from financials
+where month = 'Feb' or month = 'Mar';

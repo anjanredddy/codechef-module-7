@@ -1,0 +1,3 @@
+select n.connection_id,n.origin,n.destination,t.truck_type,(n.distance*t.cost_per_distance) as running_cost from network n 
+join truck t on n.truck_id = t.truck_id
+where n.origin = 'New York' and n.destination = 'Chicago';

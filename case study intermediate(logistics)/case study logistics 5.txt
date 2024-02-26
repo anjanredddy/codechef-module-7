@@ -1,0 +1,5 @@
+select lane_id,origin,destination,revenue,case 
+when revenue>=25000 then 'High revenue'
+when revenue between 18000 and 25000 then 'Medium revenue'
+when revenue<18000 then 'Low revenue' end as revenue_cat
+from revenue

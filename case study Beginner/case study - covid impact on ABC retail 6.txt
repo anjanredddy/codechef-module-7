@@ -1,0 +1,3 @@
+select product_type,sum(revenue) as Annual_Revenue , sum(Profit_loss) as Annual_PnL
+from financials
+group by product_type;

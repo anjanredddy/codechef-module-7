@@ -1,0 +1,5 @@
+select product_type,product_id,units_sold,d.month
+from division_product_sales d 
+join monthly_sales m 
+on d.month = m.month 
+where m.type_of_product = 'High_Margin';

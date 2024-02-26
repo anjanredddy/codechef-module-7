@@ -1,0 +1,7 @@
+select n.connection_id,n.origin,n.destination,case
+when n.distance*t.cost_per_distance>=1500 then 'High cost'
+when n.distance*t.cost_per_distance between 1000 and 1500 then 'Medium cost'
+when n.distance*cost_per_distance < 1000 then 'Low cost' end as cost_category
+from network n 
+join truck t on n.truck_id = t.truck_id
+where t.truck_type = 'Trailer';

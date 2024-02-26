@@ -1,0 +1,5 @@
+select r.lane_id,r.origin,r.destination,(r.revenue-(n.distance*t.cost_per_distance)) as profit from revenue r 
+join network n on n.origin = r.origin and n.destination = r.destination
+join truck t on n.truck_id = t.truck_id
+where t.truck_id = 'Truck2'
+order by profit desc;

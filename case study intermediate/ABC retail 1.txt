@@ -1,0 +1,6 @@
+select * from monthly_sales
+limit 5;
+select * from division_product_sales
+limit 5;
+select * from product_catalog
+limit 5;

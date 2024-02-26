@@ -1,0 +1,4 @@
+select d.product_id,d.product_type,d.units_sold,d.month from division_product_sales d 
+ where d.units_sold > (
+ select avg(dps.units_sold) from division_product_sales dps 
+ where dps.product_id = d.product_id);

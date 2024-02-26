@@ -1,0 +1,11 @@
+create table data as
+SELECT *,
+RANK() OVER (PARTITION BY product_id ORDER BY units_sold ASC , month ASC) AS sales_rank
+FROM 
+division_product_sales
+ORDER by product_id;
+
+
+SELECT product_id,units_sold as min_sold ,month 
+from data
+WHERE sales_rank = 1;

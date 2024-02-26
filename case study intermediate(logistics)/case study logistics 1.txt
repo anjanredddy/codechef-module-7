@@ -1,0 +1,6 @@
+select * from Network
+limit 3;
+select * from Truck
+limit 3;
+select * from Revenue
+limit 3;

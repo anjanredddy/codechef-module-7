@@ -1,0 +1,8 @@
+update financials
+set Revenue = 25000 
+where month = 'Jul' and product_type = 'Low_Margin' and Division = 'Menswear';
+update financials
+set Revenue = 10000
+where month = 'Aug' and product_type = 'New_Products' and Division = 'Womenswear';
+select * from financials
+where (month = 'Jul' and product_type = 'Low_Margin' and Division = 'Menswear') or (month='Aug' and product_type = 'New_Products' and Division = 'Womenswear');
